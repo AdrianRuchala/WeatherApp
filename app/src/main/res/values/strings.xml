@@ -2,4 +2,10 @@
     <string name="app_name">WeatherApp</string>
     <string name="type_city">Type city</string>
     <string name="search">Search</string>
+    <string name="temperature">Temperature (C):</string>
+    <string name="temperature_feels_like">Temperature feels like:</string>
+    <string name="cloud_cover">Cloud cover:</string>
+    <string name="wind_speed">Wind speed (Kmph):</string>
+    <string name="weather_desc">Weather description:</string>
+    <string name="humidity">Humidity:</string>
 </resources>

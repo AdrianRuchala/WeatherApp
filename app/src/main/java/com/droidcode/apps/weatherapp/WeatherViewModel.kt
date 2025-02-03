@@ -1,9 +1,10 @@
 package com.droidcode.apps.weatherapp
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.droidcode.apps.weatherapp.data.Weather
+import com.droidcode.apps.weatherapp.data.CurrentCondition
 import com.droidcode.apps.weatherapp.data.repository.WeatherRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -13,11 +14,13 @@ import javax.inject.Inject
 class WeatherViewModel @Inject constructor(
     private val repository: WeatherRepository
 ) : ViewModel() {
-    val weatherState = MutableLiveData<Weather?>()
+    private val currentConditionState = MutableLiveData<CurrentCondition?>()
+    val weather: LiveData<CurrentCondition?> = currentConditionState
 
-    suspend fun getWeather(city: String){
+    fun getWeather(city: String){
         viewModelScope.launch {
-            weatherState.value = repository.getWeather(city)
+            val response = repository.getWeather(city)
+            currentConditionState.value = response.current_condition.firstOrNull()
         }
     }
 }
