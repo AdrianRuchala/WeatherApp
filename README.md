@@ -1,1 +1,1 @@
-# WeatherApp
+Simple weather app with Dagger-Hilt and Retrofit
