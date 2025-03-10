@@ -1,6 +1,6 @@
 package com.droidcode.apps.weatherapp.di
 
-import com.droidcode.apps.weatherapp.data.remote.WetherApi
+import com.droidcode.apps.weatherapp.data.remote.WeatherApi
 import com.squareup.moshi.KotlinJsonAdapterFactory
 import com.squareup.moshi.Moshi
 import dagger.Module
@@ -30,7 +30,7 @@ object WeatherAppModule {
 
     @Provides
     @Singleton
-    fun provideWeatherApi(): WetherApi {
+    fun provideWeatherApi(): WeatherApi {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(MoshiConverterFactory.create(moshi))

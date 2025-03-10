@@ -1,11 +1,11 @@
-package com.droidcode.apps.weatherapp
+package com.droidcode.apps.weatherapp.presentation.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.droidcode.apps.weatherapp.data.CurrentCondition
-import com.droidcode.apps.weatherapp.data.repository.WeatherRepository
+import com.droidcode.apps.weatherapp.domain.models.CurrentCondition
+import com.droidcode.apps.weatherapp.domain.repository.WeatherRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

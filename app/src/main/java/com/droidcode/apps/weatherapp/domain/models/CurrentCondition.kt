@@ -1,4 +1,4 @@
-package com.droidcode.apps.weatherapp.data
+package com.droidcode.apps.weatherapp.domain.models
 
 data class CurrentCondition (
     val temp_C: String?,

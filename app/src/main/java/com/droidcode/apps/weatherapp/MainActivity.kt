@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.droidcode.apps.weatherapp.presentation.main.WeatherScreen
+import com.droidcode.apps.weatherapp.presentation.viewmodels.WeatherViewModel
 import com.droidcode.apps.weatherapp.ui.theme.WeatherAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 

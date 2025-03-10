@@ -1,4 +1,4 @@
-package com.droidcode.apps.weatherapp
+package com.droidcode.apps.weatherapp.presentation.main
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -24,7 +24,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.droidcode.apps.weatherapp.data.CurrentCondition
+import com.droidcode.apps.weatherapp.R
+import com.droidcode.apps.weatherapp.presentation.viewmodels.WeatherViewModel
+import com.droidcode.apps.weatherapp.domain.models.CurrentCondition
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
